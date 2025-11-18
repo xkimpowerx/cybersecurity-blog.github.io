@@ -19,23 +19,28 @@ A FastAPI-based blog application with admin functionality, article management, a
 ## Installation
 
 1. Clone the repository:
+
 ```bash
 git clone <your-repo-url>
 cd Cursor
 ```
 
 2. Install dependencies:
+
 ```bash
 pip install -r requirements.txt
 ```
 
 3. Create an admin user:
+
 ```bash
 python3 blog_create_admin.py
 ```
+
 Enter your desired username and password when prompted.
 
 Alternatively, use command line arguments:
+
 ```bash
 python3 blog_create_admin.py <username> <password>
 ```
@@ -43,11 +48,13 @@ python3 blog_create_admin.py <username> <password>
 ## Running the Application
 
 Start the development server:
+
 ```bash
 python3 blog_main.py
 ```
 
 Or using uvicorn directly:
+
 ```bash
 uvicorn blog_main:app --host 127.0.0.1 --port 8000 --reload
 ```
@@ -117,4 +124,3 @@ Navigate to `http://127.0.0.1:8000/admin` and log in with your admin credentials
 ## License
 
 This project is open source and available for personal use.
-
