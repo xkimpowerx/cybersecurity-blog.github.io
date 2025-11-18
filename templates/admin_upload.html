@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload Article - Cybersecurity Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', path='style.css') }}">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">Cybersecurity Blog</a>
+            <div class="ms-auto">
+                <a class="btn btn-secondary" href="/admin">Back to Dashboard</a>
+                <a class="btn btn-warning" href="/logout">Logout</a>
+            </div>
+        </div>
+    </nav>
+    <main class="container mt-4">
+        <h2>Upload Article</h2>
+        
+        {% if message %}
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+        {% endif %}
+        
+        {% if error %}
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            {{ error }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+        {% endif %}
+        
+        <div class="card mt-4">
+            <div class="card-body">
+                <h5 class="card-title">Upload Article File</h5>
+                <p class="card-text">
+                    Upload a markdown (.md, .markdown) or text (.txt) file to create a new article.
+                    <br><br>
+                    <strong>For Markdown files:</strong> The title will be extracted from the first # heading, or the filename will be used if no heading is found.
+                    <br>
+                    <strong>For Text files:</strong> The filename will be used as the title.
+                </p>
+                <form method="post" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label for="file" class="form-label">Select File</label>
+                        <input type="file" class="form-control" id="file" name="file" accept=".md,.txt,.markdown" required>
+                        <div class="form-text">Accepted formats: .md, .txt, .markdown</div>
+                    </div>
+                    <button type="submit" class="btn btn-success">Upload Article</button>
+                    <a class="btn btn-secondary ms-2" href="/admin">Cancel</a>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,159 @@
+body {
+    background: #131822 url('https://raw.githubusercontent.com/mmastrac/fastapi-cyber-demo/main/static/img/bg-grid-dark.svg') repeat;
+    color: #e6fffb;
+    font-family: 'Fira Mono', 'Consolas', 'Monaco', monospace;
+    min-height: 100vh;
+}
+
+.navbar {
+    background: linear-gradient(90deg, #0f2027, #2c5364);
+    box-shadow: 0 4px 12px rgba(0,255,128,0.07);
+}
+
+.navbar-brand {
+    color: #11ffe7 !important;
+    text-shadow: 0 0 6px #11ffe7, 0 0 1px #fff;
+    letter-spacing: 2px;
+    font-weight: 900;
+    font-family: 'Fira Mono', monospace;
+}
+
+.card {
+    background: rgba(17, 30, 47, 0.97);
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px 0 #27fde9ad;
+    color: #baffef;
+    transition: transform .18s;
+}
+.card:hover {
+    transform: translateY(-5px) scale(1.01);
+    box-shadow: 0 4px 28px 0 #17ffc6fa;
+}
+.card-title {
+    color: #11ffe7;
+    font-family: 'Fira Mono', monospace;
+    letter-spacing: 1px;
+}
+.card-text {
+    color: #aaffdd;
+    letter-spacing: 0.5px;
+}
+.btn-primary {
+    background: #13e656;
+    border: none;
+    box-shadow: 0 2px 6px 0 #13e65699;
+    color: #121212;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-shadow: 0 0 8px #37fa71a6, 0 0 1px #c6ffea;
+    transition: background .2s,box-shadow .2s;
+}
+.btn-primary:hover {
+    background: #11ffe7;
+    color: #111827;
+    box-shadow: 0 4px 16px #11ffe7d0;
+}
+.btn-secondary, .btn-warning {
+    background: #23242a;
+    border: none;
+    color: #11ffe7;
+    transition: background .2s;
+}
+.btn-secondary:hover, .btn-warning:hover {
+    background: #11ffe7;
+    color: #23242a;
+}
+.table {
+    color: #eaffea;
+    background: #131822;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.table th {
+    background: #212935;
+    color: #11ffe7;
+    border: none;
+}
+.table td {
+    background: #181e2c;
+    color: #aaffdd;
+    border: none;
+}
+input, textarea, select {
+    background: #181e2c !important;
+    color: #d9fff7 !important;
+    border: 1.2px solid #11ffe7 !important;
+    border-radius: 6px;
+    font-family: 'Fira Mono', monospace;
+}
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #13e656 !important;
+    box-shadow: 0 0 0 2px #11ffe755;
+}
+h1, h2, h3, h4, h5 {
+    font-family: 'Fira Mono', monospace;
+    color: #11ffe7;
+    letter-spacing: 1px;
+    text-shadow: 0 0 4px #11ffe7a1;
+}
+a, a:visited {
+    color: #49fbab;
+    text-decoration: underline dotted #37fa71a6;
+}
+a:hover {
+    color: #11ffe7;
+    text-shadow: 0 0 5px #11ffe7;
+}
+/* neon circuit borders */
+main.container {
+    border: 2px solid #11ffe755;
+    box-shadow: 0 0 32px #0cffe555;
+    border-radius: 16px;
+    padding: 2.5rem 2.5rem 1.25rem 2.5rem;
+    background: rgba(16,22,30,0.91);
+    margin-bottom: 3rem;
+}
+::-webkit-scrollbar {
+    background: #131822;
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: #11ffe7;
+    border-radius: 5px;
+    box-shadow: 0 0 6px #11ffe7a1;
+}
+/* Glow effect */
+.glow {
+    color: #11ffe7;
+    text-shadow: 0 0 2px #11ffe7, 0 0 9px #0fa;
+}
+/* For cyber bg font */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;700&display=swap');
+
+.article-content {
+    color: #d9fff7;
+    line-height: 1.75;
+    font-size: 1rem;
+}
+.article-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1.5rem auto;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px #00000055;
+    border: 1px solid #11ffe722;
+}
+.article-content figure {
+    margin: 1.5rem auto;
+    text-align: center;
+}
+.article-content figure img {
+    margin: 0 auto 0.75rem;
+}
+.article-content figcaption {
+    font-size: 0.9rem;
+    color: #9fe8d8;
+}

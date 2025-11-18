@@ -1,0 +1,30 @@
+/* scrambled-text.css */
+.text-block {
+  display: inline-block;
+}
+.text-block .char {
+  display: inline-block;
+  will-change: contents;
+}
+
+/* Optional size/weight utility for larger, bolder scrambled text */
+.scramble-lg {
+  font-size: 10.5rem; /* increase as desired */
+  font-weight: 500;
+}
+
+/* Ensure inner characters take on the larger size/weight as well */
+.scramble-lg .char {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/* Medium size/weight utility */
+.scramble-md {
+  font-size: 3rem;
+  font-weight: 800;
+}
+.scramble-md .char {
+  font-size: inherit;
+  font-weight: inherit;
+}

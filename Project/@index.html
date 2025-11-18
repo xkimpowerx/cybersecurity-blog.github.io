@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PH API Search</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        #output {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+    <h1>PH API Search</h1>
+    <button id="runSearch">Run Search</button>
+    <div id="output"></div>
+
+    <script>
+        $(document).ready(function() {
+            $('#runSearch').click(function() {
+                $('#output').text('Searching...');  // Show a loading message
+                $.ajax({
+                    url: '/run-search',
+                    method: 'GET',
+                    timeout: 60000,  // Set a 60-second timeout
+                    success: function(data) {
+                        var formattedOutput = data.output.replace(
+                            /(https?:\/\/[^\s]+)/g, 
+                            '<a href="$1" target="_blank">$1</a>'
+                        );
+                        $('#output').html(formattedOutput);
+                    },
+                    error: function(jqXHR, textStatus, errorThrown) {
+                        console.error('AJAX error:', textStatus, errorThrown);
+                        console.error('Response:', jqXHR.responseText);
+                        $('#output').html('Error: ' + textStatus + ', ' + errorThrown + '<br>Response: ' + jqXHR.responseText);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
